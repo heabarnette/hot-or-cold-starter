@@ -58,13 +58,14 @@ $(document).ready(function(){
 	else if (compare > 0) {
 	$('#feedback').replaceWith('<h2 id="feedback">Very Hot!</h2>');
 	}
-	else if (compare = 0) {
-	$('#feedback').replaceWith(winner);
-	}
-// error for NaN
-	else {
+	// error for NaN
+	else if (guess%1!=0) {
 	$('#feedback').replaceWith('<h2 id="feedback">Please enter a number!</h2>');
 	}
+	else {
+	$('#feedback').replaceWith(winner);
+	}
+
 //	# of guesses appear in span#count
 	$('#count').replaceWith('<span id="count">'+ guesscount +'</span>');
 //  add guessed numbers as a li to ul#guessList

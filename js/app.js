@@ -55,7 +55,7 @@ $(document).ready(function(){
 	else if (compare > 10) {
 	$('#feedback').replaceWith('<h2 id="feedback">Hot!</h2>');
 	}
-	else if (compare > 1) {
+	else if (compare > 0) {
 	$('#feedback').replaceWith('<h2 id="feedback">Very Hot!</h2>');
 	}
 	else if (compare = 0) {
